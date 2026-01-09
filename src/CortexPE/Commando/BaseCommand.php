@@ -122,7 +122,8 @@ abstract class BaseCommand extends Command implements IArgumentable, IRunnable, 
 							)
 						);
 					} elseif(empty($msg)) {
-						$sender->sendMessage(str_replace("<permission>", implode(";", $cmd->getPermission()), $msg));
+						$sender->sendMessage(str_replace("<permission>", implode(";", $cmd->getPermissions()), $msg));
+
 					}
 
 					return;
